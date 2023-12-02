@@ -35,7 +35,7 @@ class TransectionList extends StatelessWidget {
           } else if (snapshot.connectionState == ConnectionState.waiting) {
             return Text("Loading");
           } else if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
-            return const Center(child: Text("No transactions found"));
+            return const Center(child: Text("Nenhuma Transação"));
           }
           var data = snapshot.data!.docs;
           return ListView.builder(
