@@ -31,7 +31,7 @@ class _AddTransactionFormState extends State<AddTransactionForm> {
       });
 
       final user = FirebaseAuth.instance.currentUser;
-      int timestamp = DateTime.now().microsecondsSinceEpoch;
+      int timestamp = DateTime.now().millisecondsSinceEpoch;
       var amount = int.parse(amountEditController.text);
       DateTime date = DateTime.now();
 

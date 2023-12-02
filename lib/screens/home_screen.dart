@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/screens/login_screen.dart';
 import 'package:flutter_application_2/widgets/add_transaction_form.dart';
 import 'package:flutter_application_2/widgets/hero_card.dart';
-import 'package:flutter_application_2/widgets/transation_cards.dart';
+import 'package:flutter_application_2/widgets/transations_cards.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -23,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
       isLogoutLoading = true;
     });
   }
+    
     final userId = FirebaseAuth.instance.currentUser!.uid;
 
   _dialogBuilder(BuildContext context) {
@@ -67,11 +68,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     ))
         ],
       ),
-      body: Column(
-        children: [
-          HeroCard(userId: userId,),
-          TransationsCard(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            HeroCard(userId: userId,),
+            TransationsCard(),
+          ],
+        ),
       ),
     );
   }
