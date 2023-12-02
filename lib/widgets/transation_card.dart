@@ -39,7 +39,7 @@ class TransactionCard extends StatelessWidget {
               height: 30,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
-                color : data['type'] == 'credit'
+                color : data['type'] == 'credito'
                 ? Colors.green.withOpacity(0.3)
                 : Colors.red.withOpacity(0.2),
               ),
@@ -63,7 +63,7 @@ class TransactionCard extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text("Balanço",
+                    Text("Saldo",
                         style: TextStyle(color: Colors.grey, fontSize: 13)),
                     Spacer(),
                     Text(
