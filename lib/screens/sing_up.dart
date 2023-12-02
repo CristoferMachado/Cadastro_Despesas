@@ -83,7 +83,7 @@ class _SingUpViewState extends State<SingUpView> {
                   ),
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   decoration:
-                      _buildInputDecoration("UserName", Icons.person),
+                      _buildInputDecoration("Name", Icons.person),
                   validator: appValidator.validateUserName,
                 ),
                 SizedBox(

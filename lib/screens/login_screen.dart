@@ -68,7 +68,7 @@ class _LoginViewState extends State<LoginView> {
                     controller: _emailController,
                     keyboardType: TextInputType.emailAddress,
                     autovalidateMode: AutovalidateMode.onUserInteraction,
-                    decoration: _buildInputDecoration("Emal", Icons.email),
+                    decoration: _buildInputDecoration("Email", Icons.email),
                     validator: appValidator.validateEmail),
                 SizedBox(
                   height: 16.0,
