@@ -76,6 +76,7 @@ class _LoginViewState extends State<LoginView> {
                 TextFormField(
                   controller: _passwordController,
                   keyboardType: TextInputType.phone,
+                  obscureText: true,
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   decoration: _buildInputDecoration("Sanha", Icons.lock),
                   validator: appValidator.validatePassword,
