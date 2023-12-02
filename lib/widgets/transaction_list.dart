@@ -33,7 +33,7 @@ class TransectionList extends StatelessWidget {
           if (snapshot.hasError) {
             return Text('Something went wrong');
           } else if (snapshot.connectionState == ConnectionState.waiting) {
-            return Text("Loading");
+            return Text("Carregando...");
           } else if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
             return const Center(child: Text("Nenhuma Transação"));
           }
