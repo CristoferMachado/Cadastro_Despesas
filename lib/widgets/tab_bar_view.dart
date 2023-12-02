@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/widgets/transaction_list.dart';
+import 'package:flutter_application_2/widgets/transacao_list.dart';
 
 class TypeTabBar extends StatelessWidget {
   const TypeTabBar(

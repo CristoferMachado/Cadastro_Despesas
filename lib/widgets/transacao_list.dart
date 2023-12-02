@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/widgets/transation_card.dart';
+import 'package:flutter_application_2/widgets/transacao_card.dart';
 
 class TransectionList extends StatelessWidget {
   TransectionList({super.key, 
@@ -31,7 +31,7 @@ class TransectionList extends StatelessWidget {
         future: query.limit(150).get(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (snapshot.hasError) {
-            return Text('Something went wrong');
+            return Center(child: Text('Nenhuma Transação'));
           } else if (snapshot.connectionState == ConnectionState.waiting) {
             return Text("Carregando...");
           } else if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {

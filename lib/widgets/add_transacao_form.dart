@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/utils/app_validator.dart';
-import 'package:flutter_application_2/widgets/category_dropdown.dart';
+import 'package:flutter_application_2/widgets/categoria.dart';
 import 'package:intl/intl.dart';
 import 'package:uuid/uuid.dart';
 

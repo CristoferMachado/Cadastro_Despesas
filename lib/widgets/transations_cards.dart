@@ -1,8 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
-import 'transation_card.dart';
+import 'package:flutter_application_2/widgets/transacao_card.dart';
 
 class TransationsCard extends StatelessWidget {
   TransationsCard({super.key});

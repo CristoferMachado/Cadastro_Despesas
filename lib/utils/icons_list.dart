@@ -9,6 +9,10 @@ class AppIcons {
       "icon": FontAwesomeIcons.gasPump,
     },
     {
+      "name": "Salario",
+      "icon": FontAwesomeIcons.cashRegister,
+    },
+    {
       "name": "Mercado",
       "icon": FontAwesomeIcons.shoppingCart,
     },
@@ -21,7 +25,7 @@ class AppIcons {
       "icon": FontAwesomeIcons.wifi,
     },
     {
-      "name": "Eletracidade",
+      "name": "Eletrecidade",
       "icon": FontAwesomeIcons.bolt,
     },
     {
@@ -33,11 +37,11 @@ class AppIcons {
       "icon": FontAwesomeIcons.home,
     },
     {
-      "name": "Telefône",
+      "name": "Telefone",
       "icon": FontAwesomeIcons.phone,
     },
     {
-      "name": "Lanche",
+      "name": "Lanches",
       "icon": FontAwesomeIcons.utensils,
     },
     {
@@ -45,7 +49,7 @@ class AppIcons {
       "icon": FontAwesomeIcons.film,
     },
     {
-      "name": "Saude",
+      "name": "Saúde",
       "icon": FontAwesomeIcons.medkit,
     },
     {
@@ -53,11 +57,11 @@ class AppIcons {
       "icon": FontAwesomeIcons.bus,
     },
     {
-      "name": "Roupa",
+      "name": "Roupas",
       "icon": FontAwesomeIcons.tshirt,
     },
     {
-      "name": "Segutrança",
+      "name": "Segurança",
       "icon": FontAwesomeIcons.shieldAlt,
     },
     {

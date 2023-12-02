@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/widgets/category_list.dart';
+import 'package:flutter_application_2/widgets/categoria_list.dart';
 import 'package:flutter_application_2/widgets/tab_bar_view.dart';
-import 'package:flutter_application_2/widgets/time_line_mounth.dart';
+import 'package:flutter_application_2/widgets/time_line_mes.dart';
 import 'package:intl/intl.dart';
 
 class TransactionScreen extends StatefulWidget {

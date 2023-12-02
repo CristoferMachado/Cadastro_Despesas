@@ -47,7 +47,7 @@ class Cards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue.shade900,
+      color: Color.fromARGB(255, 97, 161, 134,),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -124,7 +124,7 @@ class CardOne extends StatelessWidget {
             color: color.withOpacity(0.3),
             borderRadius: BorderRadius.circular(10)),
         child: Padding(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(15),
           child: Row(children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -136,7 +136,7 @@ class CardOne extends StatelessWidget {
                 Text("R\$ ${amount}",
                     style: TextStyle(
                         color: color,
-                        fontSize: 30,
+                        fontSize: 25,
                         fontWeight: FontWeight.w600))
               ],
             ),
@@ -144,7 +144,7 @@ class CardOne extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Icon(
-                heading == "credito"
+                heading == "Credito"
                     ? Icons.arrow_upward_outlined
                     : Icons.arrow_downward_outlined,
                 color: color,
