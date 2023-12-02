@@ -5,7 +5,8 @@ import 'package:intl/intl.dart';
 
 class TransactionCard extends StatelessWidget {
   TransactionCard({
-    super.key, required this.data,
+    super.key,
+    required this.data,
   });
   final dynamic data;
 
@@ -39,21 +40,28 @@ class TransactionCard extends StatelessWidget {
               height: 30,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
-                color : data['type'] == 'credito'
-                ? Colors.green.withOpacity(0.3)
-                : Colors.red.withOpacity(0.2),
+                color: data['type'] == 'credito'
+                    ? Colors.green.withOpacity(0.3)
+                    : Colors.red.withOpacity(0.2),
               ),
               child: Center(
-                child: FaIcon(appIcons.getExpenseCategoryIcons('${data['category']}')),
+                child: FaIcon(
+                    appIcons.getExpenseCategoryIcons('${data['category']}'),
+                    color:
+                        data['type'] == 'credito' ? Colors.green : Colors.red),
               ),
             ),
           ),
           title: Row(
             children: [
-              Expanded(child: Text('${data['title']}')),
+              Expanded(
+                child: Text('${data['title']}'),
+              ),
               Text(
-                "R\$ ${data['amount']}",
-                style: TextStyle(color: Colors.green),
+                "${data['type'] == 'credito' ? '+' : '-'} R\$ ${data['amount']}",
+                style: TextStyle(
+                    color:
+                        data['type'] == 'credito' ? Colors.green : Colors.red),
               )
             ],
           ),
