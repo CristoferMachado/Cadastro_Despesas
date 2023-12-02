@@ -15,7 +15,7 @@ class AddTransactionForm extends StatefulWidget {
 
 class _AddTransactionFormState extends State<AddTransactionForm> {
   var type = "credito";
-  var category = "Others";
+  var category = "Outros";
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   var isLoader = false;
@@ -101,14 +101,14 @@ class _AddTransactionFormState extends State<AddTransactionForm> {
               controller: titleEditingController,
               autovalidateMode: AutovalidateMode.onUserInteraction,
               validator: appValidator.isEmptyCheck,
-              decoration: InputDecoration(labelText: 'Title'),
+              decoration: InputDecoration(labelText: 'Titulo'),
             ),
             TextFormField(
               controller: amountEditController,
               autovalidateMode: AutovalidateMode.onUserInteraction,
               validator: appValidator.isEmptyCheck,
               keyboardType: TextInputType.number,
-              decoration: InputDecoration(labelText: 'Amount'),
+              decoration: InputDecoration(labelText: 'Valor'),
             ),
             CategoryDropDown(
               cattype: category,

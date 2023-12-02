@@ -57,7 +57,7 @@ class Cards extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Balanço Total",
+                  "Saldo",
                   style: TextStyle(
                       fontSize: 18,
                       color: Colors.white,

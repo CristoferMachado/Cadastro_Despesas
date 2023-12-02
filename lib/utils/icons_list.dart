@@ -5,15 +5,15 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class AppIcons {
   final List<Map<String, dynamic>> homeExpensesCategories = [
     {
-      "name": "Gas Filling",
+      "name": "Combustivel",
       "icon": FontAwesomeIcons.gasPump,
     },
     {
-      "name": "Grocery",
+      "name": "Mercado",
       "icon": FontAwesomeIcons.shoppingCart,
     },
     {
-      "name": "Milk",
+      "name": "Café",
       "icon": FontAwesomeIcons.mugHot,
     },
     {
@@ -21,51 +21,51 @@ class AppIcons {
       "icon": FontAwesomeIcons.wifi,
     },
     {
-      "name": "Electricity",
+      "name": "Eletracidade",
       "icon": FontAwesomeIcons.bolt,
     },
     {
-      "name": "water",
+      "name": "Água",
       "icon": FontAwesomeIcons.water,
     },
     {
-      "name": "Rent",
+      "name": "Casa",
       "icon": FontAwesomeIcons.home,
     },
     {
-      "name": "Phone Bill",
+      "name": "Telefône",
       "icon": FontAwesomeIcons.phone,
     },
     {
-      "name": "Dining Out",
+      "name": "Lanche",
       "icon": FontAwesomeIcons.utensils,
     },
     {
-      "name": "Entertainament",
+      "name": "Entretenimento",
       "icon": FontAwesomeIcons.film,
     },
     {
-      "name": "Healthcare",
+      "name": "Saude",
       "icon": FontAwesomeIcons.medkit,
     },
     {
-      "name": "Transportatio",
+      "name": "Transporte",
       "icon": FontAwesomeIcons.bus,
     },
     {
-      "name": "Clothing",
+      "name": "Roupa",
       "icon": FontAwesomeIcons.tshirt,
     },
     {
-      "name": "Insurance",
+      "name": "Segutrança",
       "icon": FontAwesomeIcons.shieldAlt,
     },
     {
-      "name": "Education",
+      "name": "Educação",
       "icon": FontAwesomeIcons.graduationCap,
     },
     {
-      "name": "Others",
+      "name": "Outros",
       "icon": FontAwesomeIcons.cartPlus,
     },
   ];

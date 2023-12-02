@@ -24,10 +24,11 @@ class NavBar extends StatelessWidget {
           label: 'Home',
         ),
         NavigationDestination(
-          icon: Icon(Icons.explore),
+          icon: Icon(Icons.list),
           selectedIcon: Icon(Icons.home, color: Colors.white),
           label: 'Transacion',
         ),
+        
       ],
     );
   }
