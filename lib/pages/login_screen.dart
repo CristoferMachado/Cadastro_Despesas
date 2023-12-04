@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/screens/sing_up.dart';
+import 'package:flutter_application_2/pages/sing_up.dart';
 import 'package:flutter_application_2/services/auth_service.dart';
 import 'package:flutter_application_2/utils/app_validator.dart';
 

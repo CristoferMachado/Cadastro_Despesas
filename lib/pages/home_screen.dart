@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/screens/login_screen.dart';
+import 'package:flutter_application_2/pages/login_screen.dart';
 import 'package:flutter_application_2/widgets/add_transacao_form.dart';
 import 'package:flutter_application_2/widgets/card.dart';
 import 'package:flutter_application_2/widgets/transations_cards.dart';
