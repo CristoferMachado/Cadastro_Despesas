@@ -147,15 +147,15 @@ class CardOne extends StatelessWidget {
               ],
             ),
             Spacer(),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Icon(
-                heading == "Credito"
-                    ? Icons.arrow_upward_outlined
-                    : Icons.arrow_downward_outlined,
-                color: color,
-              ),
-            )
+            // Padding(
+            //   padding: const EdgeInsets.all(8.0),
+            //   child: Icon(
+            //     heading == "Credito"
+            //         ? Icons.arrow_upward_outlined
+            //         : Icons.arrow_downward_outlined,
+            //     color: color,
+            //   ),
+            // )
           ]),
         ),
       ),

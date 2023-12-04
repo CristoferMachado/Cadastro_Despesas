@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_application_2/utils/app_validator.dart';
 import 'package:flutter_application_2/widgets/categoria.dart';
 import 'package:intl/intl.dart';
@@ -82,7 +83,7 @@ class _AddTransactionFormState extends State<AddTransactionForm> {
           .doc(id)
           .set(data);
 
-          Navigator.pop(context);
+      Navigator.pop(context);
       setState(() {
         isLoader = false;
       });
@@ -108,7 +109,17 @@ class _AddTransactionFormState extends State<AddTransactionForm> {
               autovalidateMode: AutovalidateMode.onUserInteraction,
               validator: appValidator.isEmptyCheck,
               keyboardType: TextInputType.number,
-              decoration: InputDecoration(labelText: 'Valor'),
+              inputFormatters: [
+                FilteringTextInputFormatter.allow(RegExp(r'^\d+\.?\d{0,2}$')),
+              ], // Permite apenas números e até duas casas decimais
+              decoration: InputDecoration(
+                labelText: 'Valor',
+                prefixText: 'R\$ ', // Adiciona o símbolo do Real
+              ),
+              onChanged: (value) {
+                // Pode ser necessário remover a formatação antes de salvar no banco de dados
+                // Exemplo: double parsedValue = NumberFormat.currency(locale: 'pt_BR', symbol: 'R\$').parse(value);
+              },
             ),
             CategoryDropDown(
               cattype: category,
