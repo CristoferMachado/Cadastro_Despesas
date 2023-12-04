@@ -2,6 +2,7 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class HeroCard extends StatelessWidget {
   HeroCard({
@@ -47,7 +48,12 @@ class Cards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color.fromARGB(255, 97, 161, 134,),
+      color: Color.fromARGB(
+        255,
+        97,
+        161,
+        134,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -65,7 +71,7 @@ class Cards extends StatelessWidget {
                       fontWeight: FontWeight.w600),
                 ),
                 Text(
-                  "R\$ ${data['remainingAmont']}",
+                  "${data['type'] == 'credito' ? '+' : '-'} ${_formatCurrency(data['remainingAmont'])}",
                   style: TextStyle(
                       fontSize: 40,
                       color: Colors.white,
@@ -87,7 +93,7 @@ class Cards extends StatelessWidget {
                 CardOne(
                   color: Colors.green,
                   heading: 'Credito',
-                  amount: "${data['totalCredit']}",
+                  amount: "${_formatCurrency(data['totalCredit'])}",
                 ),
                 SizedBox(
                   width: 10,
@@ -95,7 +101,7 @@ class Cards extends StatelessWidget {
                 CardOne(
                   color: Colors.red,
                   heading: 'Debito',
-                  amount: "${data['totalDebit']}",
+                  amount: "${_formatCurrency(data['totalDebit'])}",
                 ),
               ],
             ),
@@ -133,7 +139,7 @@ class CardOne extends StatelessWidget {
                   heading,
                   style: TextStyle(color: color, fontSize: 15),
                 ),
-                Text("R\$ ${amount}",
+                Text(" ${amount}",
                     style: TextStyle(
                         color: color,
                         fontSize: 25,
@@ -155,4 +161,23 @@ class CardOne extends StatelessWidget {
       ),
     );
   }
+}
+
+// Função para formatar o valor como moeda
+String _formatCurrency(dynamic amount) {
+  double amountAsDouble;
+
+  if (amount is int) {
+    // Se 'amount' for um int, convertemos diretamente para double
+    amountAsDouble = amount.toDouble();
+  } else if (amount is double) {
+    // Se 'amount' já for um double, usamos diretamente
+    amountAsDouble = amount;
+  } else {
+    // Caso contrário, tentamos converter a string para double
+    amountAsDouble = double.tryParse(amount.toString()) ?? 0.0;
+  }
+
+  final currencyFormat = NumberFormat.currency(locale: 'pt_BR', symbol: 'R\$');
+  return currencyFormat.format(amountAsDouble);
 }

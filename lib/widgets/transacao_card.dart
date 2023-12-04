@@ -58,10 +58,10 @@ class TransactionCard extends StatelessWidget {
                 child: Text('${data['title']}'),
               ),
               Text(
-                "${data['type'] == 'credito' ? '+' : '-'} R\$ ${data['amount']}",
+                "${data['type'] == 'credito' ? '+' : '-'} ${_formatCurrency(data['amount'])}",
                 style: TextStyle(
-                    color:
-                        data['type'] == 'credito' ? Colors.green : Colors.red),
+                  color: data['type'] == 'credito' ? Colors.green : Colors.red,
+                ),
               )
             ],
           ),
@@ -89,4 +89,19 @@ class TransactionCard extends StatelessWidget {
       ),
     );
   }
+}
+
+String _formatCurrency(dynamic amount) {
+  double amountAsDouble;
+
+  if (amount is int) {
+    amountAsDouble = amount.toDouble();
+  } else if (amount is double) {
+    amountAsDouble = amount;
+  } else {
+    amountAsDouble = double.tryParse(amount.toString()) ?? 0.0;
+  }
+
+  final currencyFormat = NumberFormat.currency(locale: 'pt_BR', symbol: 'R\$');
+  return currencyFormat.format(amountAsDouble);
 }
